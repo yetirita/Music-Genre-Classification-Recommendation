@@ -70,7 +70,7 @@ we use Ball Tree to store our Music library and accelerate our KNN query.
 The first part is Naïve KNN recommendation. we first do normalization for our dataset, and simply use the dataset to build a Ball Tree. We try both 3 seconds and 30 senonds segment and we want to find top 5 neighbors and 7 neighbors.
 From the table above we can see that the top 5 recommendation result of 3 seconds segment is around 80%, and result of 30s segment is around 60%. For example, we pick two of the query results.
 
-### classification-based recommendation.
+### classification-based recommendation
 After doing the classification, we have a label for each music, so we can divide the whole dataset into 10 parts according to the label. For each part, we construct a Ball Tree separately. The process is similar with the Naïve KNN recommendation part.
 
 However, there is a problem. How we evaluate this recommendation model? it is difficult to evaluate the result because we find the neighbors in the music of the same label. Then we find a solution, we use 3s segments to make recommendations and see if the nearest music comes from the same 30s segment.
